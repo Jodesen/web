@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#f7f7f3",
+              "surface": "#f7f7f3",
+              "on-error": "#ffefec",
+              "primary-container": "#9df197",
+              "inverse-primary": "#9df197",
+              "on-tertiary": "#dcfbdd",
+              "secondary-container": "#f6cfc2",
+              "error-dim": "#b92902",
+              "tertiary": "#47624b",
+              "error-container": "#f95630",
+              "primary-fixed": "#9df197",
+              "surface-tint": "#176a21",
+              "primary": "#176a21",
+              "on-surface": "#2d2f2d",
+              "on-primary": "#d1ffc8",
+              "on-tertiary-container": "#48624b",
+              "on-primary-fixed-variant": "#12661e",
+              "inverse-on-surface": "#9c9d9a",
+              "tertiary-fixed": "#ddfcde",
+              "on-primary-fixed": "#00460e",
+              "on-tertiary-fixed": "#36503a",
+              "on-background": "#2d2f2d",
+              "secondary-dim": "#65493f",
+              "on-secondary-fixed-variant": "#6a4e44",
+              "surface-bright": "#f7f7f3",
+              "secondary": "#72554b",
+              "primary-dim": "#025d16",
+              "surface-container-high": "#e2e3de",
+              "inverse-surface": "#0d0f0d",
+              "tertiary-container": "#ddfcde",
+              "secondary-fixed": "#f6cfc2",
+              "primary-fixed-dim": "#90e28a",
+              "on-secondary-fixed": "#4b3229",
+              "on-tertiary-fixed-variant": "#526d55",
+              "on-primary-container": "#005c15",
+              "on-surface-variant": "#5a5c59",
+              "surface-container-lowest": "#ffffff",
+              "error": "#b02500",
+              "tertiary-dim": "#3c5640",
+              "surface-container": "#e8e9e4",
+              "outline-variant": "#adadaa",
+              "surface-dim": "#d3d5d0",
+              "surface-variant": "#dcddd9",
+              "on-secondary-container": "#5f453b",
+              "surface-container-highest": "#dcddd9",
+              "surface-container-low": "#f1f1ed",
+              "tertiary-fixed-dim": "#cfedd0",
+              "on-error-container": "#520c00",
+              "secondary-fixed-dim": "#e7c1b4",
+              "on-secondary": "#ffefeb",
+              "outline": "#767774"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .organic-gradient {
+            background: radial-gradient(circle at top left, #9df197 0%, #176a21 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- Top Navigation Bar -->
+<nav class="bg-[#f7f7f3]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold text-[#176a21] dark:text-green-500 tracking-tighter">青禾智慧农业小站</span>
+<div class="hidden md:flex items-center gap-6 font-['Manrope'] font-semibold text-sm tracking-tight">
+<a class="text-[#176a21] dark:text-green-400 border-b-2 border-[#176a21] dark:border-green-400 pb-1" href="#">首页</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#176a21] transition-colors" href="#">农业知识</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#176a21] transition-colors" href="#">实践计划</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-stone-200/20 dark:bg-stone-800/20 rounded-full px-4 py-2 mr-4">
+<span class="material-symbols-outlined text-stone-500 text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder-stone-400" placeholder="搜索农业知识..." type="text"/>
+</div>
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600 dark:text-stone-300">notifications</span>
+</button>
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600 dark:text-stone-300">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative overflow-hidden pt-12 pb-24 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container/30 text-primary-dim text-xs font-semibold mb-6 tracking-wide">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+                    智慧引领 · 绿色未来
+                </div>
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl text-on-surface leading-[1.1] tracking-tight mb-8">
+                    聚焦绿色生产与<br/><span class="text-primary">乡村发展</span>的农业平台
+                </h1>
+<p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                    我们致力于通过智慧化的数据分析与农业知识共享，助力农户实现可持续生产，共同描绘生态宜居的乡村新画卷。
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-semibold shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95 flex items-center gap-2">
+                        查看农业知识
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-full font-semibold hover:bg-surface-container-high transition-colors active:scale-95">
+                        了解我们
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden relative shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Close-up of vibrant green vegetable seedlings growing in fertile soil with soft sunlight and morning dew" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJi4EceAp8MDOd97XR_AxoM7TcNnPEkPT-TNTIiaEJlJ4oDwidwn8a2xOkEA_JZ0GTK2jkuz-lkFTSSLueoj-PPR2GWugarrwP9l1smWPjux_4TSY7T8ZeOLxE4WFE7gUUaac-vywts5jioaCp0GHSaGEHfsb12gcQtrf49ETT5NbiAhbW-Dfmnon8HfRDc3D6DbLushuOTwXq2K2yxVAoed2N5m6AUd7prjXfoLdPfEXBIvJfvC7U6uxquT0LBaEunZ6Qso7iaLE"/>
+<div class="absolute bottom-6 left-6 right-6 glass-nav p-6 rounded-lg border border-white/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<p class="text-white font-bold">智慧监测系统</p>
+<p class="text-white/80 text-xs">实时土壤湿度: 42% · 适宜播种</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-container/20 blur-3xl rounded-full"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary-container/20 blur-3xl rounded-full"></div>
+</div>
+</div>
+</header>
+<!-- Data Overview Section -->
+<section class="py-24 bg-surface-container-low rounded-xl mx-4 lg:mx-10 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="font-headline font-bold text-3xl mb-4 text-on-surface">数据展示</h2>
+<p class="text-on-surface-variant max-w-md">通过透明化数据，见证青禾在农业数字化转型中的每一步成长与积累。</p>
+</div>
+<div class="flex gap-4">
+<div class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant text-sm border border-outline-variant/10">
+                        更新于: 2024年10月
+                    </div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div class="font-headline font-extrabold text-4xl mb-2 text-on-surface">1,280+</div>
+<div class="text-on-surface-variant font-medium">知识库条目</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div class="font-headline font-extrabold text-4xl mb-2 text-on-surface">45,000+</div>
+<div class="text-on-surface-variant font-medium">注册用户</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div class="font-headline font-extrabold text-4xl mb-2 text-on-surface">326</div>
+<div class="text-on-surface-variant font-medium">活跃实践计划</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="font-headline font-extrabold text-4xl mb-2 text-on-surface">54</div>
+<div class="text-on-surface-variant font-medium">覆盖乡村</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlight Section: Healthier Land -->
+<section class="py-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="bg-tertiary rounded-xl relative overflow-hidden flex flex-col lg:flex-row items-center">
+<div class="p-12 lg:p-20 lg:w-3/5 z-10 text-on-tertiary">
+<h3 class="font-headline font-bold text-4xl md:text-5xl mb-6">让土地更健康</h3>
+<p class="text-lg text-on-tertiary/80 mb-10 max-w-xl leading-relaxed">
+                        健康的土地是农业发展的基石。我们推广有机肥替代、轮作休耕和精准灌溉技术，致力于修复生态系统，让每一寸土地都焕发勃勃生机。
+                    </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>土壤有机质提升方案</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>农药化肥减量增效技术</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>生态农业实践基地合作</span>
+</li>
+</ul>
+<button class="px-8 py-3 bg-primary-container text-on-primary-container rounded-full font-bold hover:bg-on-tertiary transition-colors">
+                        立即参与计划
+                    </button>
+</div>
+<div class="lg:w-2/5 h-80 lg:h-full relative w-full">
+<img class="w-full h-full object-cover grayscale-[0.2] contrast-125" data-alt="Deep rich dark soil held in a farmer's cupped hands with tiny green sprouts emerging in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0IHJVlaah-J28dPAM2Cwu-fWyW6sncYzmhe09J_pF2kWfKCvEvPgoexBGLD4eUDTAT6FqNdEgwvdWtsw5OjTuIt3WLyezX_HbbrzAqbmPUS0jz1InHiPIznsIjOGxXdAXch8CDuj7iJ-lfHKu7FAUpnOb1ftvPnl2xUWNsNJplRA35x2LFiTyYRXnjDjVUfHBCeKeeeCWLolRkNt3U5aSMNJgNx-cGRhKZuroKRDdT26-_3vvTdzqKE0U1_joqD1fRL-5L919jck"/>
+<div class="absolute inset-0 bg-gradient-to-r from-tertiary via-tertiary/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Grid (Asymmetric Bento) -->
+<section class="py-24 px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline font-bold text-3xl mb-4">探索农业奥秘</h2>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-lg p-8 relative overflow-hidden flex flex-col justify-end group cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of perfectly aligned sustainable vegetable garden rows in the countryside during golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALTQIdL7rDDjThNePNbV75hDFoCfLVVOpqGoa5VGymr2NTGJRQYoksjtnAg64Z0l2ETNSB0gSgU7mrMCVSOooTgpIKAoepvOSTDBSxaoOYrq9cIGc9Rk-xQhUyZsn8LxhyfdctejF4pGCOrUOcVIziXAitXCh6Y1KaZm3ZccoDerJSs1r9zhWAZlw39aTZh21kJ1kruIQkfX9Nba0HsULohsvRotPM2TSKm6sBh4Q9M9ksow9rCK4ggr0lNv3iI9dv3jpxesGHJXU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="relative z-10 text-white">
+<div class="bg-primary/90 text-on-primary text-[10px] uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4">热门专题</div>
+<h4 class="text-3xl font-bold mb-2">现代节水灌溉技术全解析</h4>
+<p class="text-white/70 max-w-md">了解滴灌与渗灌如何在减少50%用水量的同时提高产量。</p>
+</div>
+</div>
+<div class="bg-secondary-container rounded-lg p-8 relative overflow-hidden group cursor-pointer">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">compost</span>
+<h4 class="text-xl font-bold text-on-secondary-container mb-2">有机堆肥入门</h4>
+<p class="text-on-secondary-container/70 text-sm">将生活废弃物转化为黑色黄金的秘诀。</p>
+</div>
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
+</div>
+<div class="bg-tertiary-container rounded-lg p-8 relative overflow-hidden group cursor-pointer">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-4">pest_control</span>
+<h4 class="text-xl font-bold text-on-tertiary-container mb-2">生物防虫手册</h4>
+<p class="text-on-tertiary-container/70 text-sm">利用益虫保护你的作物，告别传统农药。</p>
+</div>
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 full-width rounded-t-[3rem] mt-20">
+<div class="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 md:grid-cols-3 gap-12 font-['Plus_Jakarta_Sans'] text-sm text-stone-600 dark:text-stone-400 transition-all duration-300">
+<div class="space-y-6">
+<span class="text-lg font-bold text-stone-800 dark:text-stone-100">青禾智慧农业小站</span>
+<p class="leading-relaxed">致力于通过科技与自然和谐共生的方式，推动乡村振兴与生态农业的可持续发展。我们相信，每一粒种子都孕育着未来的希望。</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-stone-800 dark:text-stone-100 mb-6 uppercase tracking-wider text-xs">快速链接</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4" href="#">关于我们</a></li>
+<li><a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4" href="#">联系支持</a></li>
+<li><a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4 text-[#176a21] font-medium" href="#">隐私政策</a></li>
+<li><a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4" href="#">服务条款</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-stone-800 dark:text-stone-100 mb-6 uppercase tracking-wider text-xs">订阅通讯</h5>
+<p class="mb-6 leading-relaxed">获取最新的农业资讯、政策解读与实践案例，直接发送到您的邮箱。</p>
+<div class="flex">
+<input class="bg-white dark:bg-stone-900 border-none rounded-l-full px-6 py-3 w-full focus:ring-1 focus:ring-primary text-sm" placeholder="您的邮箱" type="email"/>
+<button class="bg-[#176a21] dark:bg-green-500 text-white px-6 py-3 rounded-r-full hover:brightness-110 transition-all font-semibold">订阅</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-10 pb-10 flex flex-col md:flex-row justify-between items-center border-t border-stone-200/50 dark:border-stone-800/50 pt-8 gap-4">
+<p>© 2024 青禾智慧农业小站. 致力于可持续绿色生长.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    服务在线
+                </span>
+<p class="text-xs opacity-50">Powered by Qinghe Smart Cloud</p>
+</div>
+</div>
+</footer>
+</body></html>

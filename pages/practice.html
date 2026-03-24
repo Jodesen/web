@@ -7,6 +7,69 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="practice-page">
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="6.5"></circle>
+      <path d="m16 16 4.5 4.5"></path>
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M7.5 16.5h9c.8 0 1.5-.7 1.5-1.5V12c0-3-1.7-5.3-4.2-6V5.5a1.8 1.8 0 0 0-3.6 0V6C7.7 6.7 6 9 6 12v3c0 .8.7 1.5 1.5 1.5Z"></path>
+      <path d="M10 19a2 2 0 0 0 4 0"></path>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="3.5"></circle>
+      <path d="M5 18.5c1.8-2.8 4.2-4.2 7-4.2s5.2 1.4 7 4.2"></path>
+    </symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24">
+      <rect x="6" y="5" width="12" height="15" rx="2.5"></rect>
+      <path d="M9 5.5h6V4.8A1.8 1.8 0 0 0 13.2 3h-2.4A1.8 1.8 0 0 0 9 4.8Z"></path>
+      <path d="M9.5 10h5"></path>
+      <path d="M9.5 14h5"></path>
+    </symbol>
+    <symbol id="i-add-task" viewBox="0 0 24 24">
+      <rect x="4.5" y="5" width="11.5" height="15" rx="2.5"></rect>
+      <path d="M7.2 5.5h6.1V4.8A1.8 1.8 0 0 0 11.5 3H9a1.8 1.8 0 0 0-1.8 1.8Z"></path>
+      <path d="M10.2 11.5h4.3"></path>
+      <path d="M10.2 15h4.3"></path>
+      <path d="M18.5 9v7"></path>
+      <path d="M15 12.5h7"></path>
+    </symbol>
+    <symbol id="i-progress" viewBox="0 0 24 24">
+      <path d="M4 19.5h16"></path>
+      <path d="m6.5 15 4-4 3 2.5 4-5"></path>
+      <circle cx="6.5" cy="15" r="1"></circle>
+      <circle cx="10.5" cy="11" r="1"></circle>
+      <circle cx="13.5" cy="13.5" r="1"></circle>
+      <circle cx="17.5" cy="8.5" r="1"></circle>
+    </symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24">
+      <path d="M12 20v-7"></path>
+      <path d="M12 13c0-4 2.8-6.8 7-7-1 4.4-3.5 7-7 7Z"></path>
+      <path d="M12 13c0-3.5-2.4-5.8-6-6.6.4 4.2 2.4 6.6 6 6.6Z"></path>
+    </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24">
+      <rect x="5" y="5" width="5" height="5" rx="1"></rect>
+      <rect x="14" y="5" width="5" height="5" rx="1"></rect>
+      <rect x="5" y="14" width="5" height="5" rx="1"></rect>
+      <rect x="14" y="14" width="5" height="5" rx="1"></rect>
+    </symbol>
+    <symbol id="i-checklist" viewBox="0 0 24 24">
+      <path d="m6.5 8.5 1.5 1.5 2.5-2.5"></path>
+      <path d="M12 8.5h5.5"></path>
+      <path d="m6.5 14.5 1.5 1.5 2.5-2.5"></path>
+      <path d="M12 14.5h5.5"></path>
+      <path d="M6.5 20h11"></path>
+    </symbol>
+    <symbol id="i-speed" viewBox="0 0 24 24">
+      <path d="M5 17a7 7 0 1 1 14 0"></path>
+      <path d="m12 12 4-3"></path>
+      <path d="M7.5 17h9"></path>
+    </symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24">
+      <path d="M14.5 6.5a4 4 0 0 0 3.8 5l-8.2 8.2a1.8 1.8 0 1 1-2.6-2.6l8.2-8.2a4 4 0 0 0 5-3.8l-2.4 1.2-2.6-2.6Z"></path>
+    </symbol>
+  </svg>
+
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="../index.html">青禾智慧农业小站</a>
@@ -15,65 +78,109 @@
         <a href="knowledge.html">农业知识</a>
         <a class="active" href="practice.html">实践计划</a>
       </nav>
+      <div class="header-tools">
+        <label class="header-search">
+          <span class="search-mark" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><use href="#i-search"></use></svg>
+          </span>
+          <input type="text" placeholder="搜索农业知识..." aria-label="搜索农业知识">
+        </label>
+        <button class="header-action notice-action" type="button" aria-label="消息">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bell"></use></svg>
+        </button>
+        <button class="header-action profile-action" type="button" aria-label="我的">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-user"></use></svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="sub-hero">
-      <div class="container practice-hero">
-        <div class="practice-hero-copy">
-          <p class="eyebrow">计划中心</p>
-          <h1>种植计划与农事任务安排</h1>
-          <p class="hero-desc">
-            结合常见作物管理流程，整理种植安排建议与阶段任务进度，便于查看和调整日常计划。
-          </p>
-          <div class="hero-pills">
-            <span class="hero-pill">作物选择</span>
-            <span class="hero-pill">面积估算</span>
-            <span class="hero-pill">阶段任务</span>
-            <span class="hero-pill">进度查看</span>
+      <div class="container">
+        <div class="practice-hero-head">
+          <div class="practice-hero-copy">
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clipboard"></use></svg>
+              农事工具台
+            </p>
+            <h1>种植计划与<span>农事任务安排</span></h1>
+            <p class="hero-desc">
+              面向日常种植安排的在线实践页，支持面积测算、基础计划生成与任务推进，
+              让计划查看、结果展示和执行节奏在同一页里完成。
+            </p>
           </div>
-          <div class="hero-actions">
-            <a class="button primary" href="#planSection">生成种植计划</a>
-            <a class="button ghost" href="#progressSection">查看任务进度</a>
-          </div>
-          <div class="practice-highlights">
-            <article class="practice-highlight-card">
-              <span>覆盖内容</span>
-              <strong>作物选择、面积估算与结果整理</strong>
-            </article>
-            <article class="practice-highlight-card">
-              <span>执行阶段</span>
-              <strong>从土地观察到展示总结分步推进</strong>
-            </article>
-            <article class="practice-highlight-card">
-              <span>使用方式</span>
-              <strong>先生成计划，再按阶段更新任务进度</strong>
-            </article>
+          <div class="practice-cta-group">
+            <a class="button primary" href="#planSection">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-add-task"></use></svg>
+              生成种植计划
+            </a>
+            <a class="button ghost" href="#progressSection">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-progress"></use></svg>
+              查看任务进度
+            </a>
           </div>
         </div>
 
-        <aside class="practice-hero-panel">
-          <p class="panel-label">计划概览</p>
-          <h3>从作物选择到任务推进，安排更清晰</h3>
-          <p>
-            页面整合了计划生成和任务跟进两个模块，可快速整理基础安排，也方便按步骤推进日常农事工作。
-          </p>
+        <div class="practice-highlights">
+          <article class="practice-highlight-card">
+            <span class="practice-highlight-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><use href="#i-sprout"></use></svg>
+            </span>
+            <div>
+              <small>作物选择</small>
+              <strong>3 类常用作物</strong>
+            </div>
+          </article>
+          <article class="practice-highlight-card">
+            <span class="practice-highlight-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><use href="#i-grid"></use></svg>
+            </span>
+            <div>
+              <small>面积估算</small>
+              <strong>按输入快速换算</strong>
+            </div>
+          </article>
+          <article class="practice-highlight-card">
+            <span class="practice-highlight-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><use href="#i-checklist"></use></svg>
+            </span>
+            <div>
+              <small>阶段任务</small>
+              <strong>支持顺序推进</strong>
+            </div>
+          </article>
+          <article class="practice-highlight-card">
+            <span class="practice-highlight-icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><use href="#i-speed"></use></svg>
+            </span>
+            <div>
+              <small>进度查看</small>
+              <strong>动态反馈完成度</strong>
+            </div>
+          </article>
+        </div>
+
+        <article class="practice-summary-banner">
+          <div class="practice-summary-copy">
+            <h2>把计划生成、结果查看和任务推进放在同一条操作链路里</h2>
+            <p>页面上方先概览作物范围、任务阶段和使用目标，下方继续保留当前页面已有的计划生成、结果展示和任务推进模块。</p>
+          </div>
           <div class="practice-overview">
             <article class="practice-overview-item">
-              <span>作物类型</span>
+              <span>覆盖作物</span>
               <strong>水稻、玉米、番茄</strong>
             </article>
             <article class="practice-overview-item">
-              <span>计划内容</span>
-              <strong>种苗数量、管理天数、展示重点</strong>
+              <span>任务阶段</span>
+              <strong>观察、灌溉、记录、总结</strong>
             </article>
             <article class="practice-overview-item">
-              <span>任务进度</span>
-              <strong>观察、浇水、记录、总结四个阶段</strong>
+              <span>使用目标</span>
+              <strong>计划生成与过程推进同步展示</strong>
             </article>
           </div>
-        </aside>
+        </article>
       </div>
     </section>
 
@@ -81,13 +188,16 @@
       <div class="container">
         <div class="practice-section-head">
           <div class="section-copy">
-            <p class="eyebrow">计划工具</p>
-            <h2>查看安排建议并跟进执行进度</h2>
-            <p>左侧可生成基础种植安排，右侧可按步骤推进阶段任务。</p>
-            <div class="section-inline-note">
-              <span class="section-note-label">当前模块</span>
-              <strong>包含计划生成、结果展示、进度推进三类信息</strong>
-            </div>
+            <p class="eyebrow">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wrench"></use></svg>
+              计划工具
+            </p>
+            <h2>生成基础安排并持续推进阶段任务</h2>
+            <p>下方保留原有计算器、结果卡片和任务进度逻辑，让页面在展示效果之外，也能继续承担真实业务场景中的操作入口。</p>
+          </div>
+          <div class="section-inline-note">
+            <span class="section-note-label">当前模块</span>
+            <strong>包含计划生成、结果展示、任务推进和完成状态反馈。</strong>
           </div>
         </div>
 
@@ -95,9 +205,12 @@
           <article class="plan-card calculator-card" id="planSection">
             <div class="card-top">
               <div>
-                <p class="eyebrow">计划生成</p>
+                <p class="eyebrow">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-add-task"></use></svg>
+                  计划生成
+                </p>
                 <h2>种植计划计算器</h2>
-                <p class="card-desc">选择作物并输入面积后，可快速生成一份基础种植安排。</p>
+                <p class="card-desc">选择作物并输入面积后，页面会生成一份基础种植安排，脚本逻辑保持不变。</p>
               </div>
               <span class="card-badge">种植安排</span>
             </div>
@@ -119,7 +232,7 @@
                 </div>
 
                 <button class="button primary full" id="planBtn" type="button">生成计划</button>
-                <p class="field-tip">适合用于快速整理基础安排，便于查看种苗准备和管理周期。</p>
+                <p class="field-tip">适合快速整理基础安排，也便于把结果作为展示型信息模块直接放进页面。</p>
               </div>
 
               <div class="plan-side">
@@ -127,17 +240,17 @@
                   <p id="planTitle">推荐计划：6 亩水稻</p>
                   <p id="seedResult">预计种苗准备：18 份</p>
                   <p id="dayResult">预计基础管理：12 天</p>
-                  <p id="incomeResult">预计展示亮点：节水、观察、记录三项并重</p>
+                  <p id="incomeResult">预计展示亮点：重点练习节水灌溉和水位观察</p>
                 </div>
 
                 <div class="plan-meta">
                   <article class="plan-meta-item">
                     <span>适用场景</span>
-                    <strong>日常安排、阶段整理、展示准备</strong>
+                    <strong>日常安排、阶段梳理、成果展示前的准备。</strong>
                   </article>
                   <article class="plan-meta-item">
-                    <span>重点信息</span>
-                    <strong>面积、种苗、管理天数与说明重点</strong>
+                    <span>输出信息</span>
+                    <strong>面积、种苗、管理天数与阶段重点说明。</strong>
                   </article>
                 </div>
               </div>
@@ -147,17 +260,17 @@
               <article class="plan-flow-item">
                 <span>步骤 1</span>
                 <strong>选择作物类型</strong>
-                <p>根据当前安排切换水稻、玉米或番茄。</p>
+                <p>根据当前安排切换水稻、玉米或番茄，保留原来的计算方式。</p>
               </article>
               <article class="plan-flow-item">
                 <span>步骤 2</span>
                 <strong>输入种植面积</strong>
-                <p>系统会结合面积自动计算基础准备数量。</p>
+                <p>系统会自动根据面积换算基础准备数量和管理周期。</p>
               </article>
               <article class="plan-flow-item">
                 <span>步骤 3</span>
-                <strong>查看生成结果</strong>
-                <p>页面会给出种苗、天数和展示重点说明。</p>
+                <strong>查看结果卡片</strong>
+                <p>推荐计划、种苗数、管理天数和展示亮点会同步更新。</p>
               </article>
             </div>
           </article>
@@ -165,9 +278,12 @@
           <article class="plan-card progress-card" id="progressSection">
             <div class="card-top">
               <div>
-                <p class="eyebrow">任务推进</p>
+                <p class="eyebrow">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-progress"></use></svg>
+                  任务推进
+                </p>
                 <h2>实践任务进度条</h2>
-                <p class="card-desc">按顺序完成每一个阶段步骤，页面会同步更新当前完成进度。</p>
+                <p class="card-desc">按顺序完成阶段任务时，页面会自动更新当前进度与提示文案。</p>
               </div>
               <span class="card-badge">阶段跟进</span>
             </div>
@@ -194,7 +310,7 @@
               <li class="task-item">
                 <span class="task-step">02</span>
                 <div class="task-copy">
-                  <strong>完成浇水安排</strong>
+                  <strong>完成灌溉安排</strong>
                   <span>结合天气和作物状态，合理安排浇水时间。</span>
                 </div>
               </li>
@@ -202,7 +318,7 @@
                 <span class="task-step">03</span>
                 <div class="task-copy">
                   <strong>完成生长记录</strong>
-                  <span>记录作物变化，方便后续对比和整理经验。</span>
+                  <span>记录作物变化，方便后续对比和经验整理。</span>
                 </div>
               </li>
               <li class="task-item">
@@ -227,14 +343,58 @@
             </div>
           </article>
         </div>
+
+        <div class="plan-showcase">
+          <article class="plan-showcase-card">
+            <div class="plan-showcase-media">
+              <img src="../assets/images/rice-field-panorama.png" alt="水稻计划">
+            </div>
+            <div class="plan-showcase-copy">
+              <span>Rice</span>
+              <h3>水稻计划概览</h3>
+              <p>适合展示节水灌溉、水位观察与阶段记录，便于快速说明本轮作业重点。</p>
+            </div>
+          </article>
+          <article class="plan-showcase-card">
+            <div class="plan-showcase-media">
+              <img src="../assets/images/tomato-cluster.png" alt="番茄计划">
+            </div>
+            <div class="plan-showcase-copy">
+              <span>Tomato</span>
+              <h3>番茄计划概览</h3>
+              <p>适合强调搭架、浇水、成熟观察和阶段成果，让展示内容更清晰直观。</p>
+            </div>
+          </article>
+          <article class="plan-showcase-card">
+            <div class="plan-showcase-media">
+              <img src="../assets/images/field-row-aerial.png" alt="玉米计划">
+            </div>
+            <div class="plan-showcase-copy">
+              <span>Corn</span>
+              <h3>玉米计划概览</h3>
+              <p>适合展示地块分区、株行距管理和阶段巡查，帮助说明一轮任务推进节奏。</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>青禾智慧农业小站</p>
-      <p><a href="../docs/note.md">查看说明文档</a></p>
+      <div class="footer-branding">
+        <p class="footer-brand">青禾智慧农业小站</p>
+        <p>实践页围绕计划生成、结果展示和任务推进组织内容，适合日常演示与课堂说明。</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">首页</a>
+        <a href="knowledge.html">农业知识</a>
+        <a href="../docs/note.md">项目说明</a>
+      </div>
+      <div class="footer-note">
+        <p>查看实践页更新与维护说明</p>
+        <a class="button ghost footer-button" href="../docs/note.md">打开 note</a>
+      </div>
     </div>
   </footer>
 

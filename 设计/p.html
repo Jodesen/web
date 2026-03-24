@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>实践计划 - 青禾智慧农业小站</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#f7f7f3",
+              "surface": "#f7f7f3",
+              "on-error": "#ffefec",
+              "primary-container": "#9df197",
+              "inverse-primary": "#9df197",
+              "on-tertiary": "#dcfbdd",
+              "secondary-container": "#f6cfc2",
+              "error-dim": "#b92902",
+              "tertiary": "#47624b",
+              "error-container": "#f95630",
+              "primary-fixed": "#9df197",
+              "surface-tint": "#176a21",
+              "primary": "#176a21",
+              "on-surface": "#2d2f2d",
+              "on-primary": "#d1ffc8",
+              "on-tertiary-container": "#48624b",
+              "on-primary-fixed-variant": "#12661e",
+              "inverse-on-surface": "#9c9d9a",
+              "tertiary-fixed": "#ddfcde",
+              "on-primary-fixed": "#00460e",
+              "on-tertiary-fixed": "#36503a",
+              "on-background": "#2d2f2d",
+              "secondary-dim": "#65493f",
+              "on-secondary-fixed-variant": "#6a4e44",
+              "surface-bright": "#f7f7f3",
+              "secondary": "#72554b",
+              "primary-dim": "#025d16",
+              "surface-container-high": "#e2e3de",
+              "inverse-surface": "#0d0f0d",
+              "tertiary-container": "#ddfcde",
+              "secondary-fixed": "#f6cfc2",
+              "primary-fixed-dim": "#90e28a",
+              "on-secondary-fixed": "#4b3229",
+              "on-tertiary-fixed-variant": "#526d55",
+              "on-primary-container": "#005c15",
+              "on-surface-variant": "#5a5c59",
+              "surface-container-lowest": "#ffffff",
+              "error": "#b02500",
+              "tertiary-dim": "#3c5640",
+              "surface-container": "#e8e9e4",
+              "outline-variant": "#adadaa",
+              "surface-dim": "#d3d5d0",
+              "surface-variant": "#dcddd9",
+              "on-secondary-container": "#5f453b",
+              "surface-container-highest": "#dcddd9",
+              "surface-container-low": "#f1f1ed",
+              "tertiary-fixed-dim": "#cfedd0",
+              "on-error-container": "#520c00",
+              "secondary-fixed-dim": "#e7c1b4",
+              "on-secondary": "#ffefeb",
+              "outline": "#767774"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-[#f7f7f3]/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-xl font-bold text-[#176a21] dark:text-green-500 tracking-tighter">青禾智慧农业小站</div>
+<div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-semibold text-sm tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#176a21] transition-colors" href="#">首页</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#176a21] transition-colors" href="#">农业知识</a>
+<a class="text-[#176a21] dark:text-green-400 border-b-2 border-[#176a21] dark:border-green-400 pb-1" href="#">实践计划</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600">notifications</span>
+</button>
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Hero Section & Action Area -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+<div class="max-w-2xl">
+<span class="text-primary font-semibold tracking-widest text-xs uppercase mb-3 block">Smart Planning</span>
+<h1 class="text-5xl font-extrabold text-on-surface tracking-tight leading-tight">种植计划与农事任务安排</h1>
+<p class="mt-4 text-on-surface-variant text-lg">基于实时环境数据与作物生长周期，为您量身定制的科学种植实践方案。</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-weight="fill">add_task</span>
+                    生成种植计划
+                </button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined">analytics</span>
+                    查看任务进度
+                </button>
+</div>
+</header>
+<!-- Quick Stats - Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+<div class="md:col-span-1 bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary mb-6">potted_plant</span>
+<div>
+<div class="text-on-surface-variant group-hover:text-on-primary/80 text-sm mb-1">作物选择</div>
+<div class="text-3xl font-bold group-hover:text-on-primary">12 <span class="text-sm font-normal">个品种</span></div>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">grid_view</span>
+<div>
+<div class="text-on-surface-variant text-sm mb-1">面积估算</div>
+<div class="text-3xl font-bold">240 <span class="text-sm font-normal">亩</span></div>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6">assignment_late</span>
+<div>
+<div class="text-on-surface-variant text-sm mb-1">阶段任务</div>
+<div class="text-3xl font-bold">08 <span class="text-sm font-normal">项待办</span></div>
+</div>
+</div>
+<div class="md:col-span-1 bg-primary-container p-8 rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl text-on-primary-container mb-6">speed</span>
+<div>
+<div class="text-on-primary-container/70 text-sm mb-1">进度查看</div>
+<div class="text-3xl font-bold text-on-primary-container">64% <span class="text-sm font-normal">完成度</span></div>
+</div>
+</div>
+</div>
+<!-- Plan Overview - Editorial Layout -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold tracking-tight">当前计划总览</h2>
+<div class="h-[1px] flex-1 bg-outline-variant/20 mx-8"></div>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 rounded-full bg-surface-container text-xs font-medium">按时间排序</span>
+<span class="px-4 py-1.5 rounded-full bg-surface-container text-xs font-medium">筛选作物</span>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Item: Rice -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<div class="lg:col-span-4 relative min-h-[240px]">
+<img alt="Rice field" class="absolute inset-0 w-full h-full object-cover" data-alt="Close-up of vibrant green rice stalks in a flooded paddy field under bright daylight with soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVXspyGMiV641qveZUaAJyPdeUllA-xs6e2uZsXC4ZRkwWDOFN2vF8fqCW-yrQ7oiVigu3xPlYmgDHJdHNqEdZZrDj-PyRIKeR4wNoZsrHMYPvoI53I4jEtkri3n4i1s6JT022sUdZNnYzQwufIeVVRVsbnNECxVTrH1zE87Ne1ivLaiMYk8P3CJ1KY8nlVeBMsGQeQs2ZRTroBVRmiEQQDzjWlsDdZOikqwoP_GLlguVJRCaOm85kyDOW7OKFLMCEtEyosCXnRUc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary-dim/80 to-transparent flex flex-col justify-end p-8">
+<span class="text-on-tertiary text-xs tracking-widest uppercase mb-1">Cereal Crop</span>
+<h3 class="text-2xl font-bold text-on-tertiary">水稻 (Rice)</h3>
+</div>
+</div>
+<div class="lg:col-span-5 p-8 flex flex-col justify-center">
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider mb-2">计划内容</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        育苗阶段 (Seedlings)
+                                    </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        管理周期: 120天
+                                    </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        重点: 水分精准管控
+                                    </li>
+</ul>
+</div>
+<div class="border-l border-outline-variant/20 pl-8">
+<div class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider mb-2">任务进度</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between text-xs">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary" data-weight="fill">check_circle</span>
+                                            环境观察 (Observe)
+                                        </span>
+</div>
+<div class="flex items-center justify-between text-xs">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary" data-weight="fill">check_circle</span>
+                                            灌溉作业 (Water)
+                                        </span>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">radio_button_unchecked</span>
+                                            生长记录 (Record)
+                                        </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 bg-surface-container-high/40 p-8 flex flex-col items-center justify-center text-center">
+<div class="relative w-24 h-24 mb-4">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-outline-variant/10" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-bold text-xl">75%</div>
+</div>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                            详情回顾 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item: Tomato -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<div class="lg:col-span-4 relative min-h-[240px]">
+<img alt="Tomato plants" class="absolute inset-0 w-full h-full object-cover" data-alt="Lush red and green tomatoes ripening on vine inside a bright, modern greenhouse with sunlight filtering through panels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATtxROT8FNkrGi7HUQ22gOHkhnygWAXWxu6Uo6y19uV6_hirI8zhENkzurz-axCj5tELg0HX5WNZodm3UYuHy3YWs0AaRnu1XDJa51zb9pw6IsRDW1UEKwImUjB0MufLQb8fHrFICMk0u7Dn73cxjHkVT2ZxgO9Am7KxiB1Kd_POQPYvteVYIAwp6Jq2C9BYsN9esa3k_mZNu9lHRR47AFu7gmkpoWsN4Mn7CsMqO3MXw0RThRR5O90tH2_oB7QQ43k_VaOsl3wPY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-secondary-dim/80 to-transparent flex flex-col justify-end p-8">
+<span class="text-on-secondary text-xs tracking-widest uppercase mb-1">Vegetable</span>
+<h3 class="text-2xl font-bold text-on-secondary">番茄 (Tomato)</h3>
+</div>
+</div>
+<div class="lg:col-span-5 p-8 flex flex-col justify-center">
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider mb-2">计划内容</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        开花座果期
+                                    </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        管理周期: 90天
+                                    </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        重点: 养分补给与疏果
+                                    </li>
+</ul>
+</div>
+<div class="border-l border-outline-variant/20 pl-8">
+<div class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider mb-2">任务进度</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between text-xs">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-weight="fill">check_circle</span>
+                                            植株观察 (Observe)
+                                        </span>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">radio_button_unchecked</span>
+                                            施肥作业 (Water)
+                                        </span>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">radio_button_unchecked</span>
+                                            阶段总结 (Summarize)
+                                        </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 bg-surface-container-high/40 p-8 flex flex-col items-center justify-center text-center">
+<div class="relative w-24 h-24 mb-4">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-outline-variant/10" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="175.8" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-bold text-xl">30%</div>
+</div>
+<button class="text-secondary text-sm font-bold flex items-center gap-1 hover:underline">
+                            详情回顾 <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 full-width rounded-t-[3rem] mt-20 tonal-shift-bg transition-all duration-300">
+<div class="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 md:grid-cols-3 gap-12 font-['Plus_Jakarta_Sans'] text-sm text-stone-600 dark:text-stone-400">
+<div class="space-y-4">
+<div class="text-lg font-bold text-stone-800 dark:text-stone-100">青禾智慧农业小站</div>
+<p class="leading-relaxed">致力于通过科技与自然的和谐共生，打造最懂作物的智慧实践平台。</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#176a21]">eco</span>
+<span class="material-symbols-outlined text-[#176a21]">water_drop</span>
+<span class="material-symbols-outlined text-[#176a21]">sensors</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<div class="font-bold text-stone-800 dark:text-stone-100 mb-2">快速链接</div>
+<a class="hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4" href="#">关于我们</a>
+<a class="hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4" href="#">联系支持</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="font-bold text-stone-800 dark:text-stone-100 mb-2">法律条款</div>
+<a class="hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4" href="#">隐私政策</a>
+<a class="hover:text-stone-800 dark:hover:text-stone-200 underline decoration-green-500/30 underline-offset-4" href="#">服务条款</a>
+</div>
+</div>
+<div class="flex flex-col justify-between items-start md:items-end text-left md:text-right">
+<div class="p-6 bg-white/50 dark:bg-white/5 rounded-xl backdrop-blur-sm">
+<div class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Join the community</div>
+<div class="text-lg font-semibold text-on-surface">订阅我们的农业简报</div>
+</div>
+<div class="mt-8 text-xs opacity-60">© 2024 青禾智慧农业小站. 致力于可持续绿色生长.</div>
+</div>
+</div>
+</footer>
+</body></html>

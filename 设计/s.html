@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#f7f7f3",
+              "surface": "#f7f7f3",
+              "on-error": "#ffefec",
+              "primary-container": "#9df197",
+              "inverse-primary": "#9df197",
+              "on-tertiary": "#dcfbdd",
+              "secondary-container": "#f6cfc2",
+              "error-dim": "#b92902",
+              "tertiary": "#47624b",
+              "error-container": "#f95630",
+              "primary-fixed": "#9df197",
+              "surface-tint": "#176a21",
+              "primary": "#176a21",
+              "on-surface": "#2d2f2d",
+              "on-primary": "#d1ffc8",
+              "on-tertiary-container": "#48624b",
+              "on-primary-fixed-variant": "#12661e",
+              "inverse-on-surface": "#9c9d9a",
+              "tertiary-fixed": "#ddfcde",
+              "on-primary-fixed": "#00460e",
+              "on-tertiary-fixed": "#36503a",
+              "on-background": "#2d2f2d",
+              "secondary-dim": "#65493f",
+              "on-secondary-fixed-variant": "#6a4e44",
+              "surface-bright": "#f7f7f3",
+              "secondary": "#72554b",
+              "primary-dim": "#025d16",
+              "surface-container-high": "#e2e3de",
+              "inverse-surface": "#0d0f0d",
+              "tertiary-container": "#ddfcde",
+              "secondary-fixed": "#f6cfc2",
+              "primary-fixed-dim": "#90e28a",
+              "on-secondary-fixed": "#4b3229",
+              "on-tertiary-fixed-variant": "#526d55",
+              "on-primary-container": "#005c15",
+              "on-surface-variant": "#5a5c59",
+              "surface-container-lowest": "#ffffff",
+              "error": "#b02500",
+              "tertiary-dim": "#3c5640",
+              "surface-container": "#e8e9e4",
+              "outline-variant": "#adadaa",
+              "surface-dim": "#d3d5d0",
+              "surface-variant": "#dcddd9",
+              "on-secondary-container": "#5f453b",
+              "surface-container-highest": "#dcddd9",
+              "surface-container-low": "#f1f1ed",
+              "tertiary-fixed-dim": "#cfedd0",
+              "on-error-container": "#520c00",
+              "secondary-fixed-dim": "#e7c1b4",
+              "on-secondary": "#ffefeb",
+              "outline": "#767774"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f7f7f3;
+        color: #2d2f2d;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-[#f7f7f3]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold text-[#176a21] dark:text-green-500 tracking-tighter">青禾智慧农业小站</span>
+<div class="hidden md:flex items-center gap-6 font-['Manrope'] font-semibold text-sm tracking-tight">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#176a21] transition-colors" href="#">首页</a>
+<a class="text-[#176a21] dark:text-green-400 border-b-2 border-[#176a21] dark:border-green-400 pb-1" href="#">农业知识</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#176a21] transition-colors" href="#">实践计划</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-stone-200/20 dark:bg-stone-800/20 rounded-full px-4 py-2">
+<span class="material-symbols-outlined text-stone-400 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-stone-400" placeholder="搜索知识库..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600 dark:text-stone-400">notifications</span>
+</button>
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600 dark:text-stone-400">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 pt-12">
+<!-- Hero Section -->
+<header class="mb-16">
+<h1 class="font-headline font-extrabold text-5xl md:text-6xl text-on-surface tracking-tight mb-6">
+                四季农事知识与<span class="text-primary italic">田间管理要点</span>
+</h1>
+<p class="text-on-surface-variant text-xl max-w-2xl leading-relaxed">
+                结合智慧监测数据与传统农耕智慧，为您提供全周期的田间作业指导与科学生产决策支持。
+            </p>
+</header>
+<!-- Quick Navigation Chips -->
+<div class="flex flex-wrap gap-4 mb-16">
+<button class="px-8 py-3 bg-primary text-on-primary rounded-full font-semibold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">播种准备</button>
+<button class="px-8 py-3 bg-surface-container-high text-on-surface-variant rounded-full font-semibold hover:bg-surface-container-highest transition-colors">田间管理</button>
+<button class="px-8 py-3 bg-surface-container-high text-on-surface-variant rounded-full font-semibold hover:bg-surface-container-highest transition-colors">采收记录</button>
+<button class="px-8 py-3 bg-surface-container-high text-on-surface-variant rounded-full font-semibold hover:bg-surface-container-highest transition-colors">设备维护</button>
+</div>
+<!-- Bento Grid: Knowledge Overview -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
+<!-- Main Overview Card -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-10 relative overflow-hidden group">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<h2 class="font-headline text-3xl font-bold mb-4">一年四个阶段，重点一目了然</h2>
+<p class="text-on-surface-variant text-lg max-w-md">
+                            从苏醒到蛰伏，我们记录了土壤、水分与作物生长在不同时节的细微变化与管理需求。
+                        </p>
+</div>
+<div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<span class="text-primary font-bold block text-2xl mb-1">95%</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-widest">播种存活率</span>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<span class="text-primary font-bold block text-2xl mb-1">12%</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-widest">节水效能提升</span>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<span class="text-primary font-bold block text-2xl mb-1">24/7</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-widest">环境自动监测</span>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-lg border border-outline-variant/10">
+<span class="text-primary font-bold block text-2xl mb-1">+30%</span>
+<span class="text-xs text-on-surface-variant uppercase tracking-widest">预估产量增幅</span>
+</div>
+</div>
+</div>
+<div class="absolute right-[-10%] bottom-[-10%] opacity-20 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-[300px] text-primary select-none" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+</div>
+<!-- Featured Knowledge Card -->
+<div class="md:col-span-4 rounded-xl overflow-hidden relative min-h-[400px]">
+<img alt="Macro crop" class="absolute inset-0 w-full h-full object-cover" data-alt="Ultra close-up of a vibrant green seedling leaf with morning dew drops, soft natural morning light, macro photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQH8QP-6HOmMuTBvnr07sRgQ1EV_h-RFQroRu-ZQLYiGcDn94mXUVD_GOK0DprMnRZyHC-oSNg1Bk9QUpbQbF0T02GO5_1WrvxFW-DBl5r4MEeHxKzJ_fIpfLnN5Yw4wG6cdf3vTGtYBuQuiRuqkZQwT4qb2Ibmw5enjk0s57Cl85NBg64UO8ucVZihGBxMymcsY-Lz-imR9-KL23tsintQO4I-qjejUAIdaxlkW522sGJbv7bxzMJsQ8V6l7YzNbhApInlJ3ouiM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8 text-on-primary">
+<span class="text-xs font-bold uppercase tracking-widest mb-2">本周热门</span>
+<h3 class="text-2xl font-bold leading-tight mb-4">幼苗期病虫害早期识别与物理防治指南</h3>
+<button class="flex items-center gap-2 text-sm font-semibold group">
+                        阅读全文
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Detailed Seasonal Guide -->
+<div class="space-y-12">
+<h2 class="font-headline text-4xl font-bold">精细化季节管理指南</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Spring Card -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+<img alt="Spring agriculture" class="w-full h-full object-cover" data-alt="Lush green rows of lettuce in a bright field, soft spring sunlight, fresh agricultural landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh6LKYFlLvlTyOcigjenhC05nswCXAz8as8ygihUtUyaYdG7dw9nd1hG19_AC0dbwy751RPo_-DKEFdgrUkwHbnpA3NfvzTtyGvx0w9xbMJSnM7sY2DIJSFS-7FiEp4f4UwAQiT4kHIUAiZsYHhJ0vPH_cthcuXlYPdom0dv5x8wuZfEWWj7ViY3L8bZD1wCh8TkDKAgRRhHq2kd98kd_quqCTSLt_sCGTAy8_FZVns7zF3AQQQAw9-na8q1F9uiSMOOThCcPcn6E"/>
+</div>
+<div class="p-8 md:w-2/3">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="font-headline font-bold text-xl">春 · 万物生</span>
+</div>
+<h4 class="font-bold text-lg mb-4 text-on-surface">播种与基础建设</h4>
+<ul class="space-y-3 text-on-surface-variant text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                土壤肥力监测与基础施肥调优
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                育苗温控系统检查与种子浸种处理
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                农渠清理与灌溉管道压力测试
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Summer Card -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+<img alt="Summer agriculture" class="w-full h-full object-cover" data-alt="Sun-drenched corn field under a clear blue sky, vibrant green leaves, high summer noon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwZqRfAleAUtpGXgjF5GmGCKmKTWtEfjRFKgZ0Di9g4YfWzEOiuqiFdBpVUKKxZeOCHjWiVZ30thDYqfwtV8oZ9w4j3UvGdjqaxErMZ0Ckqxu6QiUGTc85AiRmvLulbZSTv4cBIKkiANtSdKf_N63X0L5g7wXB0lmZOyH0GVgkZ4NLIOepMjs9yOT6reD4s3MYEO-Z5_CBEejJMaZNhdZ-_DmZKWto5veIK_bzMKmJYM5rdVd12IDKYJUj4JOJTrRxY7cFphGcpLc"/>
+</div>
+<div class="p-8 md:w-2/3">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-orange-500">wb_sunny</span>
+<span class="font-headline font-bold text-xl">夏 · 盛时节</span>
+</div>
+<h4 class="font-bold text-lg mb-4 text-on-surface">田间动态维护</h4>
+<ul class="space-y-3 text-on-surface-variant text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                高温高湿环境下的真菌病害预防
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                智慧喷灌系统的水分精准补给
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                追肥策略：根据生长速率动态调配
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Autumn Card -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+<img alt="Autumn agriculture" class="w-full h-full object-cover" data-alt="Golden wheat field at sunset, warm rich orange and yellow tones, harvest season mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzl695mxq_wR77me7ZsFZf80B4NusMHr6wvOkBSD-Yqo9APKkWshOXGwvDKLPS-1rSXKx9hrOqTqoN9ZYDuGUyZhncIxoHKEyJGhMbIeHiVb3QNfk5Q5iTw1X_LenDlyYrRa1hX2BTdkGhDpMh5Jk7iv49q3z-Zi38ykW3rdwBMXhVA0EwshvspRXm3_UkxqDbH4-Qje74v3VNX3XJ3ipvxWPyerWLKNHt3sJeB6lyNQ5HzcOzsS3TJ-e1L1wbtsn7pmPb9GlLoPs"/>
+</div>
+<div class="p-8 md:w-2/3">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary">inventory_2</span>
+<span class="font-headline font-bold text-xl">秋 · 丰收歌</span>
+</div>
+<h4 class="font-bold text-lg mb-4 text-on-surface">采收与品质控制</h4>
+<ul class="space-y-3 text-on-surface-variant text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                测产数据记录与采收窗口期预测
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                产后冷链仓储系统预冷处理
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                土壤采样：为下一轮复种做数据准备
+                            </li>
+</ul>
+</div>
+</div>
+<!-- Winter Card -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden">
+<img alt="Winter agriculture" class="w-full h-full object-cover" data-alt="Snow-covered farmland and greenhouses, soft winter light, serene rural landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWHwsuJPGSGoNMIzuSt9LzJwa_QtSTnO5-IKEvfK7bm6B6LHXgwm6P_Bq0PZjyHQB50olYMdAu_eytiKY69-u9MQ2MSIjTfYS3dB6NTyax_i4eH9CbEJsUCVCjHKalHwTMkWyAZPS7V_YyeP9-yMuWXh0uoKQhUNV5TUPPcDSLSL3RzMbbnEIq4TweNSwG5kfA8T8dyIOMsz4tnz4z26vzOiz7msgQn2RA0yTQfSyIwLd42PB5BY9-Xc13PDil33hQuTu2a5TXQqQ"/>
+</div>
+<div class="p-8 md:w-2/3">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-blue-400">ac_unit</span>
+<span class="font-headline font-bold text-xl">冬 · 藏蓄势</span>
+</div>
+<h4 class="font-bold text-lg mb-4 text-on-surface">设备维保与规划</h4>
+<ul class="space-y-3 text-on-surface-variant text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                农机设备深度保养与软件系统升级
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                温室大棚结构加固与防寒布覆盖
+                            </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-xs mt-1">check_circle</span>
+                                年度种植计划评审与农资采购预算
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Resource Section -->
+<section class="my-24 bg-tertiary-container rounded-xl p-12 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1">
+<h3 class="font-headline text-3xl font-bold text-on-tertiary-container mb-4">下载《智慧农业全年度作业手册》</h3>
+<p class="text-on-tertiary-fixed-variant text-lg mb-8">
+                    由农业专家编写，包含50+种常见作物的生命周期管理方案与故障排除指南。
+                </p>
+<button class="bg-tertiary text-on-tertiary px-10 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">download</span>
+                    免费下载 PDF (24.5MB)
+                </button>
+</div>
+<div class="flex-1 relative">
+<div class="w-full h-64 bg-surface-container-lowest rounded-lg shadow-xl flex items-center justify-center border border-tertiary-dim/10 transform rotate-2">
+<div class="text-center p-8">
+<span class="material-symbols-outlined text-6xl text-tertiary mb-4">menu_book</span>
+<div class="font-bold text-tertiary-dim">Manual v2024.1</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width rounded-t-[3rem] mt-20 bg-stone-100 dark:bg-stone-950">
+<div class="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-6">
+<span class="text-lg font-bold text-stone-800 dark:text-stone-100">青禾智慧农业小站</span>
+<p class="font-['Plus_Jakarta_Sans'] text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+                    致力通过技术手段，为现代农户提供更简单、更科学的耕作方式。
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-bold text-sm uppercase tracking-widest text-[#176a21]">快速链接</span>
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 transition-all duration-300 underline decoration-green-500/30 underline-offset-4" href="#">关于我们</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 transition-all duration-300 underline decoration-green-500/30 underline-offset-4" href="#">联系支持</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-sm uppercase tracking-widest text-[#176a21]">法律</span>
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 transition-all duration-300 underline decoration-green-500/30 underline-offset-4" href="#">隐私政策</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 transition-all duration-300 underline decoration-green-500/30 underline-offset-4" href="#">服务条款</a>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center text-[#176a21]">
+<span class="material-symbols-outlined text-sm">language</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center text-[#176a21]">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+</div>
+<p class="font-['Plus_Jakarta_Sans'] text-sm text-stone-600 dark:text-stone-400 mt-8">
+                    © 2024 青禾智慧农业小站. 致力可持续绿色生长.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
