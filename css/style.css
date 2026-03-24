@@ -126,6 +126,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .eyebrow .icon,
@@ -540,6 +541,8 @@ p {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .slide-overlay h2 {
@@ -642,20 +645,45 @@ p {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.82fr) minmax(320px, 0.92fr);
+  grid-template-areas:
+    "main knowledge"
+    "main practice";
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   gap: 20px;
+  align-items: stretch;
 }
 
 .feature-card {
   padding: 30px;
+  height: 100%;
 }
 
 .feature-card-main {
-  grid-column: span 2;
+  grid-area: main;
   color: #dcfbdd;
   background:
     linear-gradient(135deg, rgba(71, 98, 75, 0.95) 0%, rgba(33, 58, 39, 0.98) 100%);
   border-color: rgba(255, 255, 255, 0.06);
+}
+
+.feature-grid > .feature-card:nth-child(2) {
+  grid-area: knowledge;
+}
+
+.feature-grid > .feature-card:nth-child(3) {
+  grid-area: practice;
+}
+
+.feature-card:not(.feature-card-main) {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:not(.feature-card-main) .card-link {
+  margin-top: auto;
+  padding-top: 20px;
 }
 
 .feature-card-main .feature-kicker {
@@ -1379,6 +1407,14 @@ p {
     grid-column: auto;
   }
 
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "main main"
+      "knowledge practice";
+    grid-template-rows: auto auto;
+  }
+
   .plan-layout,
   .plan-meta,
   .progress-summary,
@@ -1441,6 +1477,14 @@ p {
   .plan-flow,
   .plan-showcase {
     grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-areas:
+      "main"
+      "knowledge"
+      "practice";
+    grid-template-rows: auto;
   }
 
   .slider-window,
