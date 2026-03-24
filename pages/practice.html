@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实践计划 - 青禾智慧农业小站</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="practice-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">青禾智慧农业小站</a>
+      <nav class="main-nav">
+        <a href="../index.html">首页</a>
+        <a href="knowledge.html">农业知识</a>
+        <a class="active" href="practice.html">实践计划</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sub-hero">
+      <div class="container practice-hero">
+        <div class="practice-hero-copy">
+          <p class="eyebrow">计划中心</p>
+          <h1>种植计划与农事任务安排</h1>
+          <p class="hero-desc">
+            结合常见作物管理流程，整理种植安排建议与阶段任务进度，便于查看和调整日常计划。
+          </p>
+          <div class="hero-pills">
+            <span class="hero-pill">作物选择</span>
+            <span class="hero-pill">面积估算</span>
+            <span class="hero-pill">阶段任务</span>
+            <span class="hero-pill">进度查看</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#planSection">生成种植计划</a>
+            <a class="button ghost" href="#progressSection">查看任务进度</a>
+          </div>
+          <div class="practice-highlights">
+            <article class="practice-highlight-card">
+              <span>覆盖内容</span>
+              <strong>作物选择、面积估算与结果整理</strong>
+            </article>
+            <article class="practice-highlight-card">
+              <span>执行阶段</span>
+              <strong>从土地观察到展示总结分步推进</strong>
+            </article>
+            <article class="practice-highlight-card">
+              <span>使用方式</span>
+              <strong>先生成计划，再按阶段更新任务进度</strong>
+            </article>
+          </div>
+        </div>
+
+        <aside class="practice-hero-panel">
+          <p class="panel-label">计划概览</p>
+          <h3>从作物选择到任务推进，安排更清晰</h3>
+          <p>
+            页面整合了计划生成和任务跟进两个模块，可快速整理基础安排，也方便按步骤推进日常农事工作。
+          </p>
+          <div class="practice-overview">
+            <article class="practice-overview-item">
+              <span>作物类型</span>
+              <strong>水稻、玉米、番茄</strong>
+            </article>
+            <article class="practice-overview-item">
+              <span>计划内容</span>
+              <strong>种苗数量、管理天数、展示重点</strong>
+            </article>
+            <article class="practice-overview-item">
+              <span>任务进度</span>
+              <strong>观察、浇水、记录、总结四个阶段</strong>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="practice-section">
+      <div class="container">
+        <div class="practice-section-head">
+          <div class="section-copy">
+            <p class="eyebrow">计划工具</p>
+            <h2>查看安排建议并跟进执行进度</h2>
+            <p>左侧可生成基础种植安排，右侧可按步骤推进阶段任务。</p>
+            <div class="section-inline-note">
+              <span class="section-note-label">当前模块</span>
+              <strong>包含计划生成、结果展示、进度推进三类信息</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="practice-grid">
+          <article class="plan-card calculator-card" id="planSection">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">计划生成</p>
+                <h2>种植计划计算器</h2>
+                <p class="card-desc">选择作物并输入面积后，可快速生成一份基础种植安排。</p>
+              </div>
+              <span class="card-badge">种植安排</span>
+            </div>
+
+            <div class="plan-layout">
+              <div class="plan-form">
+                <div class="field-block">
+                  <label for="cropSelect">选择作物</label>
+                  <select id="cropSelect">
+                    <option value="rice">水稻</option>
+                    <option value="corn">玉米</option>
+                    <option value="tomato">番茄</option>
+                  </select>
+                </div>
+
+                <div class="field-block">
+                  <label for="areaInput">输入种植面积（亩）</label>
+                  <input id="areaInput" type="number" min="1" value="6">
+                </div>
+
+                <button class="button primary full" id="planBtn" type="button">生成计划</button>
+                <p class="field-tip">适合用于快速整理基础安排，便于查看种苗准备和管理周期。</p>
+              </div>
+
+              <div class="plan-side">
+                <div class="result-card">
+                  <p id="planTitle">推荐计划：6 亩水稻</p>
+                  <p id="seedResult">预计种苗准备：18 份</p>
+                  <p id="dayResult">预计基础管理：12 天</p>
+                  <p id="incomeResult">预计展示亮点：节水、观察、记录三项并重</p>
+                </div>
+
+                <div class="plan-meta">
+                  <article class="plan-meta-item">
+                    <span>适用场景</span>
+                    <strong>日常安排、阶段整理、展示准备</strong>
+                  </article>
+                  <article class="plan-meta-item">
+                    <span>重点信息</span>
+                    <strong>面积、种苗、管理天数与说明重点</strong>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-flow">
+              <article class="plan-flow-item">
+                <span>步骤 1</span>
+                <strong>选择作物类型</strong>
+                <p>根据当前安排切换水稻、玉米或番茄。</p>
+              </article>
+              <article class="plan-flow-item">
+                <span>步骤 2</span>
+                <strong>输入种植面积</strong>
+                <p>系统会结合面积自动计算基础准备数量。</p>
+              </article>
+              <article class="plan-flow-item">
+                <span>步骤 3</span>
+                <strong>查看生成结果</strong>
+                <p>页面会给出种苗、天数和展示重点说明。</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="plan-card progress-card" id="progressSection">
+            <div class="card-top">
+              <div>
+                <p class="eyebrow">任务推进</p>
+                <h2>实践任务进度条</h2>
+                <p class="card-desc">按顺序完成每一个阶段步骤，页面会同步更新当前完成进度。</p>
+              </div>
+              <span class="card-badge">阶段跟进</span>
+            </div>
+
+            <div class="progress-summary">
+              <article class="progress-summary-item">
+                <span>任务阶段</span>
+                <strong>共 4 个步骤</strong>
+              </article>
+              <article class="progress-summary-item">
+                <span>推进方式</span>
+                <strong>按顺序逐步完成</strong>
+              </article>
+            </div>
+
+            <ul class="task-list">
+              <li class="task-item done">
+                <span class="task-step">01</span>
+                <div class="task-copy">
+                  <strong>完成土地观察</strong>
+                  <span>先了解地块状态，为后续安排打好基础。</span>
+                </div>
+              </li>
+              <li class="task-item">
+                <span class="task-step">02</span>
+                <div class="task-copy">
+                  <strong>完成浇水安排</strong>
+                  <span>结合天气和作物状态，合理安排浇水时间。</span>
+                </div>
+              </li>
+              <li class="task-item">
+                <span class="task-step">03</span>
+                <div class="task-copy">
+                  <strong>完成生长记录</strong>
+                  <span>记录作物变化，方便后续对比和整理经验。</span>
+                </div>
+              </li>
+              <li class="task-item">
+                <span class="task-step">04</span>
+                <div class="task-copy">
+                  <strong>完成展示总结</strong>
+                  <span>把重点内容整理出来，形成完整的阶段小结。</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="progress-box">
+              <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+              <p id="progressText">当前进度：25%</p>
+            </div>
+
+            <div class="task-action">
+              <button class="button ghost full" id="nextTaskBtn" type="button">完成下一个步骤</button>
+              <p class="tip-text" id="taskTip">继续努力。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>青禾智慧农业小站</p>
+      <p><a href="../docs/note.md">查看说明文档</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/practice.js"></script>
+</body>
+</html>
