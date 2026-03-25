@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>豆瓣评分前 100 电影 | Futuristic Showcase</title>
+  <meta
+    name="description"
+    content="基于豆瓣电影 Top 250 当前排序截取的前 100 名电影，配合未来科技感与苹果官网风格滚动质感的静态展示页。"
+  >
+  <link rel="stylesheet" href="css/douban-top100.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="ambient ambient-three" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="douban-top100.html" aria-label="豆瓣评分前 100 电影页面">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>CINE TOP 100</strong>
+          <small>Douban Live Snapshot</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#top-ten">Top 10</a>
+        <a href="#movie-grid">榜单</a>
+        <a href="#methodology">来源</a>
+      </nav>
+
+      <a class="nav-cta" href="#movie-grid">立刻浏览</a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Live Snapshot · Douban Top 250</p>
+        <h1>把豆瓣评分前 100 的电影，做成一页会呼吸的未来电影橱窗。</h1>
+        <p class="hero-lead" id="heroLead">
+          基于豆瓣电影 Top 250 当前排序抓取前 100 名数据，页面支持搜索、年代筛选、热度排序和沉浸式视觉浏览。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-solid" href="#movie-grid">浏览完整榜单</a>
+          <a class="button button-ghost" href="#methodology">查看数据来源</a>
+        </div>
+        <div class="hero-stats" id="heroStats" aria-label="榜单摘要"></div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-three" aria-hidden="true"></div>
+
+        <article class="spotlight-card tilt-card" id="spotlightCard" aria-label="榜首电影聚焦"></article>
+
+        <div class="hero-deck" id="heroDeck" aria-label="头部电影卡片"></div>
+      </div>
+    </section>
+
+    <section class="insight-section section section-light">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-light">Signal Board</p>
+        <h2>评分、年代与热度，被压缩成一条可视化的电影光带。</h2>
+        <p>
+          这一屏把前 100 的评分密度、年代集中度和热度峰值提炼出来，你可以先看整体轮廓，再下钻到具体影片。
+        </p>
+      </div>
+
+      <div class="insight-layout">
+        <div class="insight-grid" id="insightGrid" aria-label="榜单洞察"></div>
+
+        <article class="decade-panel tilt-card">
+          <div class="panel-head">
+            <span class="panel-badge">Decade Map</span>
+            <h3>年代分布</h3>
+            <p>豆瓣前 100 的电影并不是平均散落的，它们会在某些年代形成明显的高峰。</p>
+          </div>
+          <div class="decade-bars" id="decadeBars" aria-label="年代分布条形图"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="top-ten-section section" id="top-ten">
+      <div class="section-head section-head-compact">
+        <div>
+          <p class="eyebrow">Top 10 Focus</p>
+          <h2>先从榜单最前排开始看。</h2>
+        </div>
+        <p>这一屏改成了默认整图展示的自动轮播，切换时再用手风琴切片动画过渡；鼠标移到左右两侧悬浮按钮也能手动切换。</p>
+      </div>
+      <div class="top-ten-showcase tilt-card" id="topTenShowcase">
+        <button class="top-ten-side-nav top-ten-side-prev" id="topTenPrev" type="button" aria-label="查看上一部">‹</button>
+        <div class="top-ten-main" id="topTenMain" aria-label="前十电影手风琴轮播"></div>
+        <button class="top-ten-side-nav top-ten-side-next" id="topTenNext" type="button" aria-label="查看下一部">›</button>
+      </div>
+    </section>
+
+    <section class="filter-section section section-light">
+      <div class="filter-shell">
+        <div class="filter-copy">
+          <p class="eyebrow eyebrow-light">Explore</p>
+          <h2>按你自己的偏好重新切开这份 Top 100。</h2>
+          <p>可以直接搜索片名，也可以按照年代、地区和排序方式快速过滤。</p>
+        </div>
+
+        <div class="control-grid">
+          <label class="control-field">
+            <span>搜索电影</span>
+            <input id="searchInput" type="search" placeholder="输入片名、导演、地区或类型">
+          </label>
+
+          <label class="control-field">
+            <span>年代筛选</span>
+            <select id="decadeFilter">
+              <option value="all">全部年代</option>
+            </select>
+          </label>
+
+          <label class="control-field">
+            <span>地区筛选</span>
+            <select id="regionFilter">
+              <option value="all">全部地区</option>
+            </select>
+          </label>
+
+          <label class="control-field">
+            <span>排序方式</span>
+            <select id="sortSelect">
+              <option value="rank">默认排名</option>
+              <option value="rating">按评分高低</option>
+              <option value="votes">按评价人数</option>
+              <option value="year">按年份新旧</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="filter-result" id="resultCount" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="catalog-section section section-light" id="movie-grid">
+      <div class="section-head section-head-compact">
+        <div>
+          <p class="eyebrow eyebrow-light">Full Catalog</p>
+          <h2>完整前 100 榜单</h2>
+        </div>
+        <p>
+          每一张卡片都带着排名、评分、年份、地区、导演、热度和通往豆瓣详情页的入口，适合收藏、浏览和继续深挖。
+        </p>
+      </div>
+
+      <div class="movie-grid" id="movieGrid" aria-label="电影卡片网格"></div>
+    </section>
+
+    <section class="source-section section section-light" id="methodology">
+      <article class="source-card">
+        <div class="source-copy">
+          <p class="eyebrow eyebrow-light">Source</p>
+          <h2>数据来源与说明</h2>
+          <p id="sourceSummary">
+            页面数据来自豆瓣电影 Top 250 当前列表，截取前 100 名后生成本地静态展示页。
+          </p>
+          <div class="source-meta" id="sourceMeta" aria-label="数据源摘要"></div>
+        </div>
+        <div class="source-links" id="sourceLinks" aria-label="数据源链接"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p id="footerNote">Douban Top 250 current snapshot · Static showcase by Codex.</p>
+  </footer>
+
+  <script src="js/douban-top100-data.js"></script>
+  <script src="js/douban-top100.js"></script>
+</body>
+</html>
