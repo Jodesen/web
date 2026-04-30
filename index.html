@@ -1,268 +1,180 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>青禾智慧农业小站</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="home-page">
-  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-    <symbol id="i-search" viewBox="0 0 24 24">
-      <circle cx="11" cy="11" r="6.5"></circle>
-      <path d="m16 16 4.5 4.5"></path>
-    </symbol>
-    <symbol id="i-bell" viewBox="0 0 24 24">
-      <path d="M7.5 16.5h9c.8 0 1.5-.7 1.5-1.5V12c0-3-1.7-5.3-4.2-6V5.5a1.8 1.8 0 0 0-3.6 0V6C7.7 6.7 6 9 6 12v3c0 .8.7 1.5 1.5 1.5Z"></path>
-      <path d="M10 19a2 2 0 0 0 4 0"></path>
-    </symbol>
-    <symbol id="i-user" viewBox="0 0 24 24">
-      <circle cx="12" cy="8" r="3.5"></circle>
-      <path d="M5 18.5c1.8-2.8 4.2-4.2 7-4.2s5.2 1.4 7 4.2"></path>
-    </symbol>
-    <symbol id="i-leaf" viewBox="0 0 24 24">
-      <path d="M6 14c0-5.6 4.3-8.7 11.5-10-1 7-4 11.2-9.8 11.2A4.8 4.8 0 0 1 6 14Z"></path>
-      <path d="M8 16c1.5-3.6 4.3-6.2 8.4-8"></path>
-    </symbol>
-    <symbol id="i-stats" viewBox="0 0 24 24">
-      <path d="M4 19.5h16"></path>
-      <path d="M7 17V10"></path>
-      <path d="M12 17V6.5"></path>
-      <path d="M17 17v-4.5"></path>
-      <path d="M7 9.5 12 6l5 6"></path>
-    </symbol>
-    <symbol id="i-calendar" viewBox="0 0 24 24">
-      <rect x="4" y="5.5" width="16" height="14" rx="2.5"></rect>
-      <path d="M8 4v3"></path>
-      <path d="M16 4v3"></path>
-      <path d="M4 9.5h16"></path>
-    </symbol>
-    <symbol id="i-water" viewBox="0 0 24 24">
-      <path d="M12 4.5c2.8 3.5 5.5 6.8 5.5 10a5.5 5.5 0 1 1-11 0c0-3.2 2.7-6.5 5.5-10Z"></path>
-    </symbol>
-    <symbol id="i-broadcast" viewBox="0 0 24 24">
-      <path d="M5 12.5 14 8v8.8L5 12.5Z"></path>
-      <path d="M14 9.5h2.5A2.5 2.5 0 0 1 19 12v.3a2.5 2.5 0 0 1-2.5 2.5H14"></path>
-      <path d="M7.5 13.4v4.1"></path>
-    </symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24">
-      <path d="M12 4.5 18 7v5.4c0 3.5-2.3 6.4-6 7.6-3.7-1.2-6-4.1-6-7.6V7Z"></path>
-      <path d="m9.5 12.2 1.7 1.7 3.3-3.4"></path>
-    </symbol>
-    <symbol id="i-book" viewBox="0 0 24 24">
-      <path d="M5.5 6.5A2.5 2.5 0 0 1 8 4h10.5v15H8a2.5 2.5 0 0 0-2.5 2.5Z"></path>
-      <path d="M5.5 6.5V19"></path>
-      <path d="M12 7.5h4.5"></path>
-      <path d="M12 11h4.5"></path>
-    </symbol>
-    <symbol id="i-clipboard" viewBox="0 0 24 24">
-      <rect x="6" y="5" width="12" height="15" rx="2.5"></rect>
-      <path d="M9 5.5h6V4.8A1.8 1.8 0 0 0 13.2 3h-2.4A1.8 1.8 0 0 0 9 4.8Z"></path>
-      <path d="M9.5 10h5"></path>
-      <path d="M9.5 14h5"></path>
-    </symbol>
-  </svg>
-
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">青禾智慧农业小站</a>
-      <nav class="main-nav">
-        <a class="active" href="index.html">首页</a>
-        <a href="pages/knowledge.html">农业知识</a>
-        <a href="pages/practice.html">实践计划</a>
-      </nav>
-      <div class="header-tools">
-        <label class="header-search">
-          <span class="search-mark" aria-hidden="true">
-            <svg class="icon" viewBox="0 0 24 24"><use href="#i-search"></use></svg>
-          </span>
-          <input type="text" placeholder="搜索农业知识..." aria-label="搜索农业知识">
-        </label>
-        <button class="header-action notice-action" type="button" aria-label="消息">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bell"></use></svg>
-        </button>
-        <button class="header-action profile-action" type="button" aria-label="我的">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-user"></use></svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-leaf"></use></svg>
-            绿色生产与乡村协同
-          </p>
-          <h1>围绕<span>绿色种植</span>、科技助农与乡村发展展开的农业信息平台</h1>
-          <p class="hero-desc">
-            青禾智慧农业小站聚焦田间管理、知识共享与实践协同，把绿色种植、生产服务和乡村场景串联成更清晰的浏览体验，
-            让用户可以快速了解重点内容、查阅农业知识，并进入日常种植计划管理。
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="pages/knowledge.html">查看农业知识</a>
-            <a class="button ghost" href="pages/practice.html">进入实践计划</a>
-          </div>
-          <div class="hero-metrics">
-            <article class="metric-card">
-              <span>专题栏目</span>
-              <strong>12 个持续更新</strong>
-            </article>
-            <article class="metric-card">
-              <span>田间数据</span>
-              <strong>覆盖全年观察记录</strong>
-            </article>
-            <article class="metric-card">
-              <span>服务方向</span>
-              <strong>知识、计划与协同三线联动</strong>
-            </article>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="slider-window">
-            <article class="slide-card active">
-              <img class="slide-media" src="assets/images/seedling-closeup.png" alt="绿色育苗场景">
-              <div class="slide-overlay">
-                <span class="slide-tag">绿色种植</span>
-                <h2>让土地更健康</h2>
-                <p>围绕土壤养护、节水灌溉和科学施肥整理可直接阅读的内容，帮助用户更快建立稳定的种植认知。</p>
-              </div>
-            </article>
-            <article class="slide-card">
-              <img class="slide-media" src="assets/images/field-row-aerial.png" alt="农田整齐种植场景">
-              <div class="slide-overlay">
-                <span class="slide-tag">科技助农</span>
-                <h2>让管理更高效</h2>
-                <p>通过分阶段的信息整理、重点卡片和实践任务提示，把田间管理拆解成更容易理解和执行的步骤。</p>
-              </div>
-            </article>
-            <article class="slide-card">
-              <img class="slide-media" src="assets/images/rural-seedling-support.png" alt="乡村协作与育苗支持">
-              <div class="slide-overlay">
-                <span class="slide-tag">乡村发展</span>
-                <h2>让服务更贴近田间</h2>
-                <p>把育苗支持、知识传播与乡村协作放进同一个展示入口，让站点内容更有温度，也更贴近实际生产场景。</p>
-              </div>
-            </article>
-          </div>
-          <div class="slider-controls">
-            <button id="prevSlide" type="button">上一张</button>
-            <div class="dots">
-              <button class="dot active" data-index="0" type="button" aria-label="切换到第 1 张"></button>
-              <button class="dot" data-index="1" type="button" aria-label="切换到第 2 张"></button>
-              <button class="dot" data-index="2" type="button" aria-label="切换到第 3 张"></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBTI 班味人格测试</title>
+    <meta
+      name="description"
+      content="把 miniprogram-3 微信小程序独立出来的网页版本，支持测试、结果、本地历史和海报导出。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <button class="header-pill header-pill--ghost" id="headerBackButton" type="button" hidden>
+            返回
+          </button>
+          <div class="brand-lockup">
+            <span class="brand-lockup__mark">NBTI</span>
+            <div>
+              <p class="brand-lockup__eyebrow">Office Personality Lab</p>
+              <h1 class="brand-lockup__title">班味人格测试</h1>
             </div>
-            <button id="nextSlide" type="button">下一张</button>
           </div>
+          <button class="header-pill" id="headerHistoryButton" type="button">历史档案</button>
         </div>
-      </div>
-    </section>
+      </header>
 
-    <section class="stats-section">
-      <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-stats"></use></svg>
-            数据展示
-          </p>
-          <h2>聚焦年度农事、节水管理与服务动态</h2>
-          <p>通过年度观察、节水数据、专题更新和服务进展，帮助用户快速了解站点当前重点与农业服务信息。</p>
-        </div>
-        <div class="stats-grid">
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24"><use href="#i-calendar"></use></svg>
-            </span>
-            <p class="stat-number" data-target="365">0</p>
-            <h3>全年观察天数</h3>
-            <p>持续记录田间变化，把农业知识浏览与实际观察节奏自然连接起来。</p>
-          </article>
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24"><use href="#i-water"></use></svg>
-            </span>
-            <p class="stat-number" data-target="48">0</p>
-            <h3>节水优化比例</h3>
-            <p>围绕节水灌溉、时段调整和土壤保水，让生产管理更贴近日常场景。</p>
-          </article>
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24"><use href="#i-broadcast"></use></svg>
-            </span>
-            <p class="stat-number" data-target="12">0</p>
-            <h3>月度主题内容</h3>
-            <p>把播种、管理、采收和复盘整理成适合持续更新的专题栏目。</p>
-          </article>
-          <article class="info-card">
-            <span class="card-icon" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24"><use href="#i-shield"></use></svg>
-            </span>
-            <p class="stat-number" data-target="96">0</p>
-            <h3>服务完成度目标</h3>
-            <p>通过清晰的信息结构和交互入口，让内容浏览与实践安排形成闭环。</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <main class="app-frame">
+        <section class="view view--active" data-view="home">
+          <div class="hero-grid">
+            <div class="hero-stack">
+              <div class="offset-card offset-card--sun">
+                <div class="panel hero-panel">
+                  <p class="eyebrow">NBTI Personality Scan</p>
+                  <h2 class="hero-title">测一测你的班味人格</h2>
+                  <p class="body-copy body-copy--lead">
+                    职场情境随机登场，测出你的班味人格、得分画像和专属海报。
+                  </p>
+                  <div class="chip-row">
+                    <span class="chip chip--mint">职场情境</span>
+                    <span class="chip chip--sun">随机出题</span>
+                    <span class="chip chip--lavender">本地存档</span>
+                  </div>
+                </div>
+              </div>
 
-    <section class="feature-section">
-      <div class="container">
-        <div class="feature-grid">
-          <article class="feature-card feature-card-main">
-            <p class="feature-kicker">站点服务</p>
-            <h3>覆盖农业知识、种植管理与乡村服务的综合信息平台</h3>
-            <p>
-              站点围绕四季农事、田间管理和实践安排持续更新内容，为农业学习、生产参考和乡村服务提供稳定的信息入口。
+              <div class="cta-row">
+                <button class="button button--primary" id="startQuickButton" type="button">
+                  快速测试（15题）
+                </button>
+                <button class="button button--secondary" id="startStandardButton" type="button">
+                  标准测试（30题）
+                </button>
+              </div>
+            </div>
+
+            <aside class="hero-aside">
+              <div class="poster-preview-card">
+                <div class="poster-preview-card__glow"></div>
+                <div class="poster-preview-card__content">
+                  <p class="poster-preview-card__eyebrow">Mood Meter</p>
+                  <div class="poster-preview-card__meter">
+                    <span>工位能量</span>
+                    <strong>98%</strong>
+                  </div>
+                  <p class="poster-preview-card__quote">
+                    “只要群里还亮着，我的下班就像薛定谔。”
+                  </p>
+                  <div class="poster-preview-card__bars">
+                    <span style="--bar-width: 94%"></span>
+                    <span style="--bar-width: 58%"></span>
+                    <span style="--bar-width: 76%"></span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <section class="section-block section-block--notes">
+            <div class="section-heading">
+              <h3 class="section-title">测前小纸条</h3>
+              <p class="body-copy">
+                两种模式都按六个维度随机抽题，没有标准答案，选最像你当下精神状态的那个就行。
+              </p>
+            </div>
+            <div class="note-grid">
+              <article class="note-card note-card--sun">
+                <h4>快速测试</h4>
+                <p>适合午休摸鱼，15 题迅速看个大概。</p>
+              </article>
+              <article class="note-card note-card--sky">
+                <h4>标准测试</h4>
+                <p>题量更完整，适合认真审判自己的班味。</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-block" id="latestResultSection"></section>
+        </section>
+
+        <section class="view" data-view="test">
+          <div class="test-shell">
+            <div class="test-topbar">
+              <span class="header-pill header-pill--counter" id="questionCounter">1 / 15</span>
+              <div class="test-topbar__title-wrap">
+                <p class="test-topbar__eyebrow" id="testModeLabel">快速测试</p>
+                <h2 class="test-topbar__title">NBTI 班味人格测试</h2>
+              </div>
+            </div>
+
+            <div class="progress-strip">
+              <div class="progress-strip__fill" id="progressFill"></div>
+            </div>
+
+            <div class="offset-card offset-card--sun offset-card--question">
+              <div class="panel question-panel">
+                <p class="eyebrow">Question</p>
+                <h2 class="question-title" id="questionText"></h2>
+              </div>
+            </div>
+
+            <div class="option-list" id="optionList"></div>
+
+            <div class="cta-row cta-row--test">
+              <button class="button button--secondary" id="prevQuestionButton" type="button">
+                上一题
+              </button>
+              <button class="button button--ghost" id="cancelTestButton" type="button">
+                退出测试
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" data-view="result">
+          <div id="resultContent"></div>
+        </section>
+
+        <section class="view" data-view="history">
+          <div class="section-heading section-heading--history">
+            <h2 class="hero-title hero-title--compact">你的班味档案馆</h2>
+            <p class="body-copy">
+              所有记录只存在当前浏览器，不上传、不登录、不社死。想翻哪次就翻哪次。
             </p>
-            <ul class="feature-list">
-              <li>提供四季农事知识与重点提醒</li>
-              <li>支持种植计划生成和任务推进查看</li>
-              <li>呈现绿色种植、科技助农与乡村服务动态</li>
-            </ul>
-            <a class="card-link" href="pages/knowledge.html">继续查看农业知识</a>
-          </article>
-          <article class="feature-card">
-            <span class="feature-symbol" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24"><use href="#i-book"></use></svg>
-            </span>
-            <h3>农业知识</h3>
-            <p>围绕播种、巡田、采收和维护整理四季内容，方便按季节快速查阅。</p>
-            <a class="card-link" href="pages/knowledge.html">进入知识库</a>
-          </article>
-          <article class="feature-card">
-            <span class="feature-symbol" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24"><use href="#i-clipboard"></use></svg>
-            </span>
-            <h3>种植计划</h3>
-            <p>支持面积测算、基础安排生成和任务推进查看，适合日常农事管理使用。</p>
-            <a class="card-link" href="pages/practice.html">进入计划页</a>
-          </article>
+          </div>
+          <div class="history-list" id="historyList"></div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="poster-dialog" id="posterDialog">
+      <div class="poster-dialog__backdrop" data-close-dialog="true"></div>
+      <div class="poster-dialog__panel">
+        <button class="poster-dialog__close" id="closePosterDialogButton" type="button" aria-label="关闭">
+          ×
+        </button>
+        <div class="poster-dialog__media-wrap">
+          <img id="posterPreviewImage" alt="人格海报预览" />
+        </div>
+        <div class="poster-dialog__actions">
+          <a class="button button--primary" id="downloadPosterLink" download="nbti-poster.png">下载海报</a>
         </div>
       </div>
-    </section>
-  </main>
+    </dialog>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div class="footer-branding">
-        <p class="footer-brand">青禾智慧农业小站</p>
-        <p>聚合农业知识、种植管理与乡村服务信息的综合站点。</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">首页</a>
-        <a href="pages/knowledge.html">农业知识</a>
-        <a href="pages/practice.html">实践计划</a>
-      </div>
-      <div class="footer-note">
-        <p>查看站点说明与维护记录</p>
-        <a class="button ghost footer-button" href="docs/note.md">打开说明文档</a>
-      </div>
-    </div>
-  </footer>
+    <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
 
-  <script src="js/index.js"></script>
-</body>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
